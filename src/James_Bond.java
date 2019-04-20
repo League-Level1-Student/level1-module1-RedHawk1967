@@ -1,14 +1,22 @@
+import java.util.Random;
 
 public class James_Bond {
-Vault vault = new Vault();
+static Vault vault = new Vault(new Random().nextInt(1_000_001));
+
+
+
+
 int findcode(Vault vault) {
 	
-	for (int i = 0; i < 9999; i++) {
-		vault.trycode(i);
-	} { }
+	for (int i = 0; i < 1000001; i++) {
+		
+	if (vault.trycode(i)== true ) {
+		return i; 
+	}
+	}  
 	
 	
-	return 0;
+	return -1;
 	
 
 
@@ -17,6 +25,11 @@ int findcode(Vault vault) {
 
 
 }
+public static void main(String[] args) {
+	James_Bond james = new James_Bond();
+	 System.out.println(james.findcode(vault));
+}
+
 }
 
 

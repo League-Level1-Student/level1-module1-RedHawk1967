@@ -2,7 +2,7 @@ import javax.swing.JOptionPane;
 
 public class Vault {
 
-static int code = 0000;
+static int code = 23747;
 static boolean trycode(int guess) {
 	if (guess == code) {
 		return true;
@@ -10,12 +10,15 @@ static boolean trycode(int guess) {
 	return false;}
 
 
+	
+	
 }
-public static void main(String[] args) {
-trycode(0000);	
-System.out.println(trycode(0000));
+public Vault(int code) {
+this.code = code;
 
 
 }
+
+
 
 }
